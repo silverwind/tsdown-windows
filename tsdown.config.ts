@@ -1,5 +1,9 @@
+import {fileURLToPath} from "node:url";
 import {type UserConfig} from "tsdown";
 
+const entry = fileURLToPath(new URL("index.ts", import.meta.url));
+console.info(entry);
+
 export default {
-  entry: "index.ts",
+  entry,
 } satisfies UserConfig;
