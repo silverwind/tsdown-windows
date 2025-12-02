@@ -1,11 +1,8 @@
 import {globSync} from "node:fs";
-import {type UserConfig} from "tsdown";
-
-let entry = "src\\*.ts";
-console.info(`before glob: ${entry}`);
-entry = globSync(entry);
-console.info(`after glob: ${entry}`);
+import {fileURLToPath} from "node:url";
+import type {UserConfig} from "tsdown";
 
 export default {
-  entry,
+  entry: fileURLToPath(new URL("src/index.ts", import.meta.url)),
+  fixedExtension: false,
 } satisfies UserConfig;
