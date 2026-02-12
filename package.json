@@ -3,9 +3,12 @@
   "types": "./dist/index.d.ts",
   "exports": "./dist/index.js",
   "dependencies": {
+    "@types/node": "24.10.1",
     "tsdown": "0.17.0-beta.5",
-    "typescript": "5.9.3",
-    "@types/node": "24.10.1"
+    "typescript": "5.9.3"
   },
-  "packageManager": "pnpm@10.28.2"
+  "packageManager": "pnpm@10.28.2",
+  "devDependencies": {
+    "updates-config-silverwind": "1.0.3"
+  }
 }
